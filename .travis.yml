@@ -1,5 +1,6 @@
 langage: go
-go: "-tip"
+go:
+  - 1.6
 script:
   - go build
 deploy:
