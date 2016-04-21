@@ -1,4 +1,11 @@
 langage: go
-
-go:
-  -tip
+go: "-tip"
+script:
+  - go build
+deploy:
+  provider: releases
+  api_key:
+    secure: ohsCAxtyThUuMFkLZi5c0GggKDHzzGc932ZfLLTjMM5GzrjD3fev5Te0sG/ckt3nzJ/YMIaVh6qD852CElI504D79koQZL5QVrlaDToQFcg04t6c7oaG9HGaeKE7okdnZ6KaVVGed8/2yG2fQsWpFqN5vJ3/C+fFXW9yafHGj0ykw18H1CDaVTw8KdFUjM5Noo17m7vMyQsUqqr5fT4OcM8QKzbBQ/P8yWuznIONbB8aQvZ5l2D6kPUfy3T99jJcWdHHVbqNjFvmuaICRj10abtRi212SCuQpR59IGNLpv1PC+BOJAd9ZBkIkTWav4H8BJbcXiNZkDHsT2yXT16hK4C07cK2ojs0shq/35K/LJMs1iJr9o+ZPBic+V9e+QCazv3+AbG037nIogM2DRGUNlAkLIfcVvhXpne3M2Ba0OJnFjIqVjnA6EM7dOnEwYEX1hnDnVdtyJPJYjluScRAwdXjKgrqcx6QkK9ZlL9LBoSyVLY9qoWkBFAhY9Bk07SPGGPBXBM44Biu1861tt8h7O3Xy1YW9O2BrLLQ6cxVXS7WNesBF+fgSMhQ36PsQEc7/5ScQLl1LIPf4XVk2ppQD0ydgU49Hin2vakByZ2PI4WTboh+AQFl93k08kawMUWK1doDcvKQ0S8a8D1wZjz1txUgDqH3saaLwzKXd98JpGg=
+  file: nifty-associate-image
+  on:
+    repo: higebu/nifty-associate-image
