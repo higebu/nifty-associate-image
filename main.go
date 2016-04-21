@@ -11,10 +11,6 @@ import (
 	"github.com/higebu/go-niftycloud/niftycloud"
 )
 
-func help() {
-	fmt.Println("[Usage] nifty-associate-image [image id] [option]")
-}
-
 func main() {
 	flag.Usage = func() {
 		fmt.Fprintf(os.Stderr, "Usage of %s: %s [OPTIONS] [IMAGE ID]\n", os.Args[0], os.Args[0])
@@ -26,7 +22,8 @@ func main() {
 	flag.Parse()
 	args := flag.Args()
 	if len(args) != 1 {
-		help()
+		flag.Usage()
+		os.Exit(1)
 	}
 	imageId := args[0]
 
